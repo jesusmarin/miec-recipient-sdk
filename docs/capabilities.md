@@ -43,8 +43,10 @@ declaración, pero no prueba el comportamiento de una aplicación externa.
   acredita por sí sola tolerancia a pérdida de energía del equipo.
 
 PetClinic ya aporta evidencia experimental entre procesos en el repositorio MIEC.
-Reservas aporta un segundo dominio y pruebas locales de ledger. La incorporación
-del nuevo JAR a esos consumidores todavía no está realizada.
+Reservas aporta un segundo dominio y pruebas locales de ledger. PetClinic ya incorpora
+el JAR del SDK para modelos y validaciones, con persistencia propia; el adaptador
+de MIEC usa el mismo contrato en scope test. Reservas todavía no consume el JAR.
+La aplicación de la matriz mediante interfaces SDK-03 sigue pendiente.
 
 ## Persistencia opcional
 

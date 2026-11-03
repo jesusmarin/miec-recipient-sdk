@@ -7,7 +7,9 @@ Artefacto: `com.miec:miec-recipient-sdk:0.1.0-SNAPSHOT`. Requiere Java 17 o post
 
 SDK-01 y SDK-02 están implementados: contrato, capacidades y modelos inmutables con
 validaciones. No hay implementación de ejecución, consulta, persistencia, servidor
-HTTP ni autenticación. Incorporar este JAR todavía no habilita un destinatario real.
+HTTP ni autenticación. Esas responsabilidades siguen en la aplicación consumidora.
+PetClinic ya consume el JAR en su integración experimental; MIEC lo utiliza solo
+en el adaptador de test. Esto valida los modelos, sin completar todavía SDK-03.
 El siguiente incremento es SDK-03, interfaces de ejecución y consulta.
 
 ## Construcción
@@ -63,3 +65,17 @@ que cumpla y demuestre esas garantías; el SDK no las crea al construir un objet
 - [Contrato](docs/contract.md)
 - [Capacidades](docs/capabilities.md)
 - [Avance y validaciones](docs/progress.md)
+
+## Consumidor experimental PetClinic
+
+Antes de construir PetClinic o las pruebas de MIEC, instalar el SDK en el mismo
+repositorio Maven local que utilicen los consumidores. Desde la raíz del SDK:
+
+```powershell
+mvn clean install
+```
+
+PetClinic declara com.miec:miec-recipient-sdk:0.1.0-SNAPSHOT como dependencia de
+compilación; MIEC la declara con scope test. No se copian fuentes del SDK ni se
+usa el JAR ejecutable de PetClinic como biblioteca. Esta integración utiliza los
+modelos y validaciones actuales; las interfaces SDK-03 siguen pendientes.

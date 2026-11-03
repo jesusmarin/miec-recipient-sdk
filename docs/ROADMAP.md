@@ -187,3 +187,10 @@ Estado: SDK-01 y SDK-02 completados, con 24 pruebas aprobadas, compatibilidad
 UTF8-V1 contrastada con MIEC y JAR Java 17 inspeccionado. Los pasos posteriores
 permanecen pendientes. El siguiente es SDK-03: interfaces de ejecución y consulta.
 Ver docs/progress.md para el alcance y los límites de las validaciones.
+Actualización de validación: PetClinic ya consume los modelos del JAR mediante
+Maven y conserva su propia persistencia; MIEC utiliza el SDK solo en el adaptador
+experimental de test. Es una validación anticipada del contrato actual, no la
+finalización de SDK-03 ni de SDK-06/SDK-07 completos. Ver docs/progress.md.
+
+La ruta detallada del siguiente incremento, con proyectos responsables y criterios
+de avance, está en [SDK-03](SDK-03.md).
